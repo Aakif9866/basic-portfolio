@@ -40,13 +40,13 @@ const Contact = () => {
       <div id="contact" className="contact">
         <div className="textContContact flex flex-col items-center justify-center text-center pt-40 pb-16">
           <h1 className="text-[3.8rem]">Contact Me</h1>
-          <p className="md:w-[50%] text-[1.1rem] mx-auto px-10">
+          <p className="lg:w-[50%] text-[1.1rem] mx-auto px-10">
             Please fill out the form below to discuss any work opportunities
           </p>
         </div>
         <form
           ref={form}
-          className="contactForm md:w-[50vw] mx-auto flex flex-col items-center pb-16 px-8"
+          className="contactForm lg:w-[50vw] mx-auto flex flex-col items-center pb-16 px-8"
           onSubmit={sendEmail}
         >
           <input

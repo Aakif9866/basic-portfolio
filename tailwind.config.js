@@ -1,3 +1,5 @@
+import { transform } from "framer-motion";
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -15,6 +17,22 @@ export default {
       },
       boxShadow: {
         glow: "0 0 30px rgba(0, 0, 255, 0.5)",
+      },
+      keyframes: {
+        opening: {
+          "0%": { transform: "translateY(-100%)" },
+          "50%": { transform: "translateY(0)" },
+          "60%": { transform: "translateY(-5%)" },
+          "100%": { transform: "translateY(0)" },
+        },
+        closing: {
+          "0%": { transform: "translateY(0)" },
+          "100%": { transform: "translateY(-100%)" },
+        },
+      },
+      animation: {
+        open: "opening 0.8s linear",
+        close: "closing 0.5s linear",
       },
     },
   },

@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import { Link } from "react-scroll";
 import "./Navbar.css";
 import { IoMenu } from "react-icons/io5";
+import { IoIosCloseCircleOutline } from "react-icons/io";
 
 const Navbar = () => {
   const [show, setShow] = useState(false);
   return (
     <nav className="sticky top-0 z-10 bg-background w-[100%]">
-      <div className=" navbar h-[6rem] md:flex hidden items-center justify-between ">
+      <div className=" navbar h-[6rem] lg:flex hidden items-center justify-between ">
         <Link
           to="introSection"
           spy={true}
@@ -16,11 +17,9 @@ const Navbar = () => {
           duration={500}
           activeClass="active"
         >
-          <img
-            src="../../../assets/logo.png"
-            alt=""
-            className="logo-img h-[4rem] cursor-pointer"
-          />
+          <h1 className="text-2xl cursor-pointer">
+            Miskat <span className="text-linkYellow">Alam</span>
+          </h1>
         </Link>
 
         <div className="nav-links w-[20%] flex justify-between gap-10 text-lg">
@@ -62,7 +61,7 @@ const Navbar = () => {
             to="projects"
             spy={true}
             smooth={true}
-            offset={-40}
+            offset={-80}
             duration={500}
             activeClass="text-linkYellow"
           >
@@ -90,22 +89,26 @@ const Navbar = () => {
       </div>
 
       <IoMenu
-        className="w-10 h-10 absolute right-4 top-4 flex md:hidden"
+        className="w-10 h-10 absolute right-4 top-4 flex lg:hidden cursor-pointer"
         onClick={() => setShow(!show)}
       />
 
       <div
-        className={` cursor-pointer  absolute right-10 top-10 p-[0.5rem] h-fit min-w-[90vw] bg-slate-900 rounded-2xl  flex-col   ${
+        className={`animate-open absolute right-0 top-0 h-fit w-full border bg-slate-900 flex-col p-4 transition-all   ${
           show ? "flex" : "hidden"
         }`}
       >
+        <IoIosCloseCircleOutline
+          className="absolute top-3 right-4 h-10 w-10"
+          onClick={() => setShow(!show)}
+        />
         <Link
           to="introSection"
           spy={true}
           smooth={true}
           offset={-120}
           duration={500}
-          className="listItem navLink text-white py-2 px-12 my-1 bg-[rgb(30,30,30)] hover:border-linkYellow"
+          className="listItem navLink text-white py-2 px-12 my-1 hover:border-linkYellow text-center"
           activeClass="text-linkYellow"
           onClick={() => setShow(false)}
         >
@@ -115,16 +118,16 @@ const Navbar = () => {
           to="about"
           spy={true}
           smooth={true}
-          offset={-60}
+          offset={-20}
           duration={500}
-          className="listItem navLink text-white py-2 px-12 my-1 bg-[rgb(30,30,30)] hover:text-linkYellow"
+          className="listItem navLink text-white py-2 px-12 my-1hover:text-linkYellow text-center"
           activeClass="text-linkYellow"
           onClick={() => setShow(false)}
         >
           About
         </Link>
         <Link
-          className="listItem navLink text-white py-2 px-12 my-1 bg-[rgb(30,30,30)] hover:text-linkYellow"
+          className="listItem navLink text-white py-2 px-12 my-1 hover:text-linkYellow text-center"
           to="education"
           spy={true}
           smooth={true}
@@ -136,7 +139,7 @@ const Navbar = () => {
           Education
         </Link>
         <Link
-          className="listItem navLink text-white py-2 px-12 my-1 bg-[rgb(30,30,30)] hover:text-linkYellow"
+          className="listItem navLink text-white py-2 px-12 my-1 hover:text-linkYellow text-center"
           to="projects"
           spy={true}
           smooth={true}
@@ -148,11 +151,11 @@ const Navbar = () => {
           Projects
         </Link>
         <Link
-          className="listItem navLink text-white py-2 px-12 my-1 bg-[rgb(30,30,30)] hover:text-linkYellow"
+          className="listItem navLink text-white py-2 px-12 my-1 hover:text-linkYellow text-center"
           to="contact"
           spy={true}
           smooth={true}
-          offset={-40}
+          offset={50}
           duration={500}
           activeClass="text-linkYellow"
           onClick={() => setShow(false)}

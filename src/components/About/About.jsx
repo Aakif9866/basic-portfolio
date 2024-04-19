@@ -37,7 +37,7 @@ const About = () => {
       >
         <div className="topCont text-center">
           <h2 className="heading text-6xl pb-8">What I do</h2>
-          <p className="desc text-2xl md:text-lg  leading-10 pb-16 ">
+          <p className="desc text-md lg:text-lg leading-10 pb-16 ">
             I am a skilled and passionate web developer with a hunger to learn
             more and become an expert in creating eye-catching and user-friendly
             websites. I am a responsible and determined person.I have deep
@@ -100,7 +100,7 @@ const About = () => {
         </div>
 
         <Reveal>
-          <div className="grid grid-cols-1 md:grid-cols-3 mt-20 w-full mx-auto gap-5">
+          <div className="grid grid-cols-1 lg:grid-cols-3 mt-20 w-full mx-auto gap-5">
             <div className="mb-8 px-5">
               <h2 className="text-2xl font-bold mb-4 text-center w-full">
                 Web Development
@@ -110,7 +110,7 @@ const About = () => {
                   {webDevelopmentSkills.map((skill, index) => (
                     <li
                       key={index}
-                      className="flex items-center w-[100%] mx-auto"
+                      className="flex items-center w-full lg:w-[100%] md:w-1/2 mx-auto"
                     >
                       <svg
                         className="w-7 h-5 mr-2 text-green-500 mx-auto"
@@ -133,13 +133,16 @@ const About = () => {
             </div>
 
             <div className="mb-8 px-5">
-              <h2 className="text-2xl font-bold mb-4 text-center w-full">
+              <h2 className="text-2xl font-bold mb-4 text-center w-full ml-2">
                 Software Engineering
               </h2>
               <Reveal>
                 <ul className="grid grid-cols-1 gap-4 ml-12">
                   {softwareEngineeringSkills.map((skill, index) => (
-                    <li key={index} className="flex items-center ">
+                    <li
+                      key={index}
+                      className="flex items-center w-full lg:w-[100%] md:w-1/2 mx-auto "
+                    >
                       <svg
                         className="w-5 h-5 mr-2 text-blue-500"
                         fill="none"
@@ -160,13 +163,16 @@ const About = () => {
               </Reveal>
             </div>
             <div className="mb-8 px-5">
-              <h2 className="text-2xl font-bold mb-4 text-center lg:text-left lg:ml-12 w-full">
+              <h2 className="text-2xl font-bold mb-4 text-left md:text-left md:ml-[15rem] lg:text-left ml-12 lg:ml-12 w-full">
                 Soft Skills
               </h2>
               <Reveal>
                 <ul className="grid grid-cols-1 gap-4 ml-12">
                   {softSkills.map((skill, index) => (
-                    <li key={index} className="flex items-center">
+                    <li
+                      key={index}
+                      className="flex items-center w-full lg:w-[100%] md:w-1/2 mx-auto"
+                    >
                       <svg
                         className="w-5 h-5 mr-2 text-linkYellow"
                         fill="none"
