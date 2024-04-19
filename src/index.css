@@ -1,7 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-*{
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -10,26 +11,29 @@
   font-family: 'Poppins', sans-serif;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   display: none;
 }
 
-body{
+body {
   background-color: rgb(30, 30, 30);
   color: #fff;
   overflow: hidden;
   overflow-y: scroll;
 }
 
-.contactBtn{
+.contactBtn {
   @apply flex items-center justify-between py-[10px] px-5 text-[1rem] rounded-3xl gap-[18px] cursor-pointer outline-none border-none text-black hover:bg-contactHover
 }
 
-.skillcard{
+.skillcard {
   @apply flex justify-center items-center gap-5 py-4 px-5 rounded-2xl bg-cardBg
 }
 
-.inputField{
+.inputField {
   @apply w-[100%] p-[1.2rem] border-none outline-none bg-cardBg mb-6 text-xl rounded-xl focus:outline-none focus:ring focus:ring-violet-300
 }
 
+.dashedLine {
+  @apply lg:absolute lg:left-1/2 lg:top-0 lg:transform lg:-translate-x-1/2 lg:w-1 lg:bg-gray-300 lg:h-full lg:shadow-glow
+}
