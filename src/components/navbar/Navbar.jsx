@@ -87,75 +87,78 @@ const Navbar = () => {
           />
           Contact Me
         </Link>
+      </div>
 
-        <IoMenu className="w-8 h-8 border" onClick={() => setShow(!show)} />
+      <IoMenu
+        className="w-10 h-10 absolute right-4 top-4 flex md:hidden"
+        onClick={() => setShow(!show)}
+      />
 
-        <div
-          className={` cursor-pointer  absolute top-4 right-2 p-[0.5rem] h-fit min-w-[15rem] bg-slate-900 rounded-2xl  flex-col   ${
-            show ? "flex" : "hidden"
-          }`}
+      <div
+        className={` cursor-pointer  absolute right-10 top-10 p-[0.5rem] h-fit min-w-[90vw] bg-slate-900 rounded-2xl  flex-col   ${
+          show ? "flex" : "hidden"
+        }`}
+      >
+        <Link
+          to="introSection"
+          spy={true}
+          smooth={true}
+          offset={-120}
+          duration={500}
+          className="listItem navLink text-white py-2 px-12 my-1 bg-[rgb(30,30,30)] hover:border-linkYellow"
+          activeClass="text-linkYellow"
+          onClick={() => setShow(false)}
         >
-          <Link
-            to="introSection"
-            spy={true}
-            smooth={true}
-            offset={-120}
-            duration={500}
-            className="listItem navLink text-white py-2 px-12 my-1 bg-[rgb(30,30,30)] hover:text-linkYellow"
-            activeClass="text-linkYellow"
-            onClick={() => setShow(false)}
-          >
-            Home
-          </Link>
-          <Link
-            to="about"
-            spy={true}
-            smooth={true}
-            offset={-60}
-            duration={500}
-            className="listItem navLink text-white py-2 px-12 my-1 bg-[rgb(30,30,30)] hover:text-linkYellow"
-            activeClass="text-linkYellow"
-            onClick={() => setShow(false)}
-          >
-            About
-          </Link>
-          <Link
-            className="listItem navLink text-white py-2 px-12 my-1 bg-[rgb(30,30,30)] hover:text-linkYellow"
-            to="education"
-            spy={true}
-            smooth={true}
-            offset={-40}
-            duration={500}
-            activeClass="text-linkYellow"
-            onClick={() => setShow(false)}
-          >
-            Education
-          </Link>
-          <Link
-            className="listItem navLink text-white py-2 px-12 my-1 bg-[rgb(30,30,30)] hover:text-linkYellow"
-            to="projects"
-            spy={true}
-            smooth={true}
-            offset={-40}
-            duration={500}
-            activeClass="text-linkYellow"
-            onClick={() => setShow(false)}
-          >
-            Projects
-          </Link>
-          <Link
-            className="listItem navLink text-white py-2 px-12 my-1 bg-[rgb(30,30,30)] hover:text-linkYellow"
-            to="contact"
-            spy={true}
-            smooth={true}
-            offset={-40}
-            duration={500}
-            activeClass="text-linkYellow"
-            onClick={() => setShow(false)}
-          >
-            Projects
-          </Link>
-        </div>
+          Home
+        </Link>
+        <Link
+          to="about"
+          spy={true}
+          smooth={true}
+          offset={-60}
+          duration={500}
+          className="listItem navLink text-white py-2 px-12 my-1 bg-[rgb(30,30,30)] hover:text-linkYellow"
+          activeClass="text-linkYellow"
+          onClick={() => setShow(false)}
+        >
+          About
+        </Link>
+        <Link
+          className="listItem navLink text-white py-2 px-12 my-1 bg-[rgb(30,30,30)] hover:text-linkYellow"
+          to="education"
+          spy={true}
+          smooth={true}
+          offset={-40}
+          duration={500}
+          activeClass="text-linkYellow"
+          onClick={() => setShow(false)}
+        >
+          Education
+        </Link>
+        <Link
+          className="listItem navLink text-white py-2 px-12 my-1 bg-[rgb(30,30,30)] hover:text-linkYellow"
+          to="projects"
+          spy={true}
+          smooth={true}
+          offset={-40}
+          duration={500}
+          activeClass="text-linkYellow"
+          onClick={() => setShow(false)}
+        >
+          Projects
+        </Link>
+        <Link
+          className="listItem navLink text-white py-2 px-12 my-1 bg-[rgb(30,30,30)] hover:text-linkYellow"
+          to="contact"
+          spy={true}
+          smooth={true}
+          offset={-40}
+          duration={500}
+          activeClass="text-linkYellow"
+          onClick={() => setShow(false)}
+        >
+          Contact
+        </Link>
       </div>
     </nav>
   );
